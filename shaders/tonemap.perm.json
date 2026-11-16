@@ -1,0 +1,7 @@
+{
+  "template": "tonemap",
+  "vertex": "present.vert",
+  "fragment": "tonemap.frag",
+  "axes": [],
+  "maxVariants": 1
+}

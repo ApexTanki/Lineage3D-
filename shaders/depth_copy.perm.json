@@ -1,0 +1,9 @@
+{
+  "template": "depth_copy",
+  "vertex": "depth_copy.vert",
+  "fragment": "depth_copy.frag",
+  "axes": [
+    { "name": "MSAA" }
+  ],
+  "maxVariants": 2
+}

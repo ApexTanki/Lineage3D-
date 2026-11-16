@@ -1,0 +1,10 @@
+{
+  "template": "particle",
+  "vertex": "particle.vert",
+  "fragment": "particle.frag",
+  "axes": [
+    { "name": "SOFT" },
+    { "name": "DISTORT" }
+  ],
+  "maxVariants": 4
+}

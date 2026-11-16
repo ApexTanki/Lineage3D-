@@ -1,0 +1,9 @@
+{
+  "template": "bloom",
+  "vertex": "present.vert",
+  "fragment": "bloom.frag",
+  "axes": [
+    { "name": "MODE", "values": ["PREFILTER", "DOWN", "UP"] }
+  ],
+  "maxVariants": 3
+}

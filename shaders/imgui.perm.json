@@ -1,0 +1,7 @@
+{
+  "template": "imgui",
+  "vertex": "imgui.vert",
+  "fragment": "imgui.frag",
+  "axes": [],
+  "maxVariants": 1
+}

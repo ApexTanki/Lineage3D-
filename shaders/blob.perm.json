@@ -1,0 +1,7 @@
+{
+  "template": "blob",
+  "vertex": "blob.vert",
+  "fragment": "blob.frag",
+  "axes": [],
+  "maxVariants": 1
+}

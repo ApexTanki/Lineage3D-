@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "flashlineage3d",
+  "version-string": "0.1.0",
+  "builtin-baseline": "9eec002df1cd109f8f104cd966a763daf9751489",
+  "dependencies": [
+    { "name": "sdl3", "features": [ "vulkan" ] },
+    "volk",
+    "vulkan-memory-allocator",
+    { "name": "glad", "features": [ "gl-api-33", "extensions", "loader" ] },
+    "glm",
+    "glslang",
+    "spirv-cross",
+    { "name": "imgui", "features": [ "sdl3-binding" ] },
+    { "name": "tracy", "default-features": false, "features": [ "on-demand" ] },
+    "yyjson",
+    "stb",
+    "cgltf",
+    "meshoptimizer",
+    "ktx",
+    "mikktspace"
+  ],
+  "features": {
+    "dev-tools": {
+      "description": "Developer tools built from source: Khronos validation layers (bundled next to dev builds, so no Vulkan SDK is needed) and tracy-capture (headless profiling)",
+      "dependencies": [
+        { "name": "vulkan-validationlayers", "platform": "windows" },
+        { "name": "tracy", "default-features": false, "features": [ "on-demand", "cli-tools" ] }
+      ]
+    }
+  }
+}

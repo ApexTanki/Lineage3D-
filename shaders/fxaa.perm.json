@@ -1,0 +1,7 @@
+{
+  "template": "fxaa",
+  "vertex": "present.vert",
+  "fragment": "fxaa.frag",
+  "axes": [],
+  "maxVariants": 1
+}

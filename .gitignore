@@ -1,0 +1,14 @@
+# Build output and caches (recreated by scripts/bootstrap.ps1 and CMake)
+/build/
+/.cache/
+/external/vcpkg/
+/out/
+
+# Downloaded sample assets
+/assets/external/
+
+# IDE / tool state
+/.vs/
+/.vscode/
+*.user
+imgui.ini

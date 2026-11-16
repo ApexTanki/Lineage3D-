@@ -1,0 +1,7 @@
+{
+  "template": "present",
+  "vertex": "present.vert",
+  "fragment": "present.frag",
+  "axes": [],
+  "maxVariants": 1
+}

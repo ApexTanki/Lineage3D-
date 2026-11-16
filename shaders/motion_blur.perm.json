@@ -1,0 +1,7 @@
+{
+  "template": "motion_blur",
+  "vertex": "present.vert",
+  "fragment": "motion_blur.frag",
+  "axes": [],
+  "maxVariants": 1
+}

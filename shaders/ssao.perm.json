@@ -1,0 +1,9 @@
+{
+  "template": "ssao",
+  "vertex": "present.vert",
+  "fragment": "ssao.frag",
+  "axes": [
+    { "name": "MODE", "values": ["AO", "BLUR"] }
+  ],
+  "maxVariants": 2
+}

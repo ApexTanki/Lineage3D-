@@ -1,0 +1,7 @@
+{
+  "template": "sky",
+  "vertex": "sky.vert",
+  "fragment": "sky.frag",
+  "axes": [],
+  "maxVariants": 1
+}

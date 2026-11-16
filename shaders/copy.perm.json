@@ -1,0 +1,7 @@
+{
+  "template": "copy",
+  "vertex": "present.vert",
+  "fragment": "copy.frag",
+  "axes": [],
+  "maxVariants": 1
+}

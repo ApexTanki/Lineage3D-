@@ -1,0 +1,9 @@
+{
+  "template": "dof",
+  "vertex": "present.vert",
+  "fragment": "dof.frag",
+  "axes": [
+    { "name": "MODE", "values": ["COC", "BLUR", "COMPOSITE"] }
+  ],
+  "maxVariants": 3
+}

@@ -1,0 +1,14 @@
+{
+  "template": "lit",
+  "vertex": "lit.vert",
+  "fragment": "lit.frag",
+  "axes": [
+    { "name": "NORMAL_MAP" },
+    { "name": "SPEC_GLOSS_MAP" },
+    { "name": "EMISSION_MAP" },
+    { "name": "ALPHA_TEST" },
+    { "name": "DETAIL_LAYER" },
+    { "name": "OBJECT", "values": ["DYNAMIC", "INSTANCED", "LIGHTMAP", "LIGHTMAP_INSTANCED", "SKINNED"] }
+  ],
+  "maxVariants": 160
+}

@@ -1,0 +1,40 @@
+{
+  "tiers": [
+    {
+      "name": "low", "hdr": false, "msaa": 1, "fxaa": true,
+      "shadows": { "cascades": 0, "size": 1024, "filter": "hardware", "staticCasters": false, "spotShadows": false,
+                   "blobShadows": true, "blobStrength": 0.6, "distance": 60 },
+      "ssao": false, "bloom": false, "softParticles": false, "refraction": false, "heatHaze": false,
+      "p2": { "depthOfField": false, "motionBlur": false, "godRays": false, "ssr": false },
+      "maxLocalLights": 2, "anisotropy": 2,
+      "budgets": { "textures": 256, "meshes": 128, "targets": 96, "buffers": 96 }
+    },
+    {
+      "name": "medium", "hdr": true, "msaa": 2, "fxaa": false,
+      "shadows": { "cascades": 2, "size": 1024, "filter": "hardware", "staticCasters": false, "spotShadows": false,
+                   "blobShadows": true, "blobStrength": 0.35, "distance": 60 },
+      "ssao": false, "bloom": true, "softParticles": true, "refraction": true, "heatHaze": true,
+      "p2": { "depthOfField": false, "motionBlur": false, "godRays": false, "ssr": false },
+      "maxLocalLights": 4, "anisotropy": 4,
+      "budgets": { "textures": 512, "meshes": 192, "targets": 224, "buffers": 96 }
+    },
+    {
+      "name": "high", "hdr": true, "msaa": 4, "fxaa": false,
+      "shadows": { "cascades": 3, "size": 2048, "filter": "poisson", "staticCasters": true, "spotShadows": true,
+                   "blobShadows": true, "blobStrength": 0.35, "distance": 120 },
+      "ssao": true, "bloom": true, "softParticles": true, "refraction": true, "heatHaze": true,
+      "p2": { "depthOfField": false, "motionBlur": false, "godRays": false, "ssr": false },
+      "maxLocalLights": 8, "anisotropy": 16,
+      "budgets": { "textures": 1024, "meshes": 256, "targets": 512, "buffers": 128 }
+    },
+    {
+      "name": "custom", "hdr": true, "msaa": 4, "fxaa": false,
+      "shadows": { "cascades": 3, "size": 2048, "filter": "poisson", "staticCasters": true, "spotShadows": true,
+                   "blobShadows": true, "blobStrength": 0.35, "distance": 120 },
+      "ssao": true, "bloom": true, "softParticles": true, "refraction": true, "heatHaze": true,
+      "p2": { "depthOfField": false, "motionBlur": false, "godRays": false, "ssr": false },
+      "maxLocalLights": 8, "anisotropy": 16,
+      "budgets": { "textures": 1024, "meshes": 256, "targets": 512, "buffers": 128 }
+    }
+  ]
+}

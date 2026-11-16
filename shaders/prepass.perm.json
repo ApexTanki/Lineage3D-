@@ -1,0 +1,10 @@
+{
+  "template": "prepass",
+  "vertex": "prepass.vert",
+  "fragment": "prepass.frag",
+  "axes": [
+    { "name": "OBJECT", "values": ["DYNAMIC", "INSTANCED", "LIGHTMAP", "LIGHTMAP_INSTANCED", "SKINNED"] },
+    { "name": "FADE" }
+  ],
+  "maxVariants": 10
+}

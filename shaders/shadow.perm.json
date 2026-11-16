@@ -1,0 +1,10 @@
+{
+  "template": "shadow",
+  "vertex": "shadow.vert",
+  "fragment": "shadow.frag",
+  "axes": [
+    { "name": "ALPHA_TEST" },
+    { "name": "OBJECT", "values": ["DYNAMIC", "INSTANCED", "SKINNED"] }
+  ],
+  "maxVariants": 6
+}

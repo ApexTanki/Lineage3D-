@@ -1,0 +1,9 @@
+{
+  "template": "god_rays",
+  "vertex": "present.vert",
+  "fragment": "god_rays.frag",
+  "axes": [
+    { "name": "MODE", "values": ["MASK", "BLUR"] }
+  ],
+  "maxVariants": 2
+}

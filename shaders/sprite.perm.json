@@ -1,0 +1,7 @@
+{
+  "template": "sprite",
+  "vertex": "sprite.vert",
+  "fragment": "sprite.frag",
+  "axes": [],
+  "maxVariants": 1
+}

@@ -1,0 +1,30 @@
+add_library(fl_renderer STATIC
+    core/ClipSpace.cpp
+    core/ShaderLibrary.cpp
+    core/GpuTimers.cpp
+    core/RenderQueue.cpp
+    core/Lights.cpp
+    core/Scene.cpp
+    core/FramePipeline.cpp
+    core/Renderer.cpp
+    core/QualityTiers.cpp
+    lighting/Environment.cpp
+    lighting/ProbeGrid.cpp
+    shadows/Cascades.cpp
+    shadows/ShadowMaps.cpp
+    shadows/BlobShadows.cpp
+    visibility/Frustum.cpp
+    visibility/OcclusionBuffer.cpp
+    visibility/Lod.cpp
+    visibility/Visibility.cpp
+    resources/ResourceManager.cpp
+    materials/MaterialSystem.cpp
+    debug/ImGuiRenderer.cpp
+    debug/DebugDraw.cpp
+    vfx/SpriteRenderer.cpp
+    particles/ParticleSystem.cpp
+    particles/ParticleRenderer.cpp
+    post/PostProcess.cpp
+    post/Ssao.cpp)
+target_link_libraries(fl_renderer PUBLIC fl_rhi fl_assets fl_anim fl_platform imgui::imgui)
+fl_target_defaults(fl_renderer)

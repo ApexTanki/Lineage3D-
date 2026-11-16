@@ -1,0 +1,78 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 21, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "toolchainFile": "${sourceDir}/external/vcpkg/scripts/buildsystems/vcpkg.cmake",
+      "cacheVariables": {
+        "VCPKG_INSTALLED_DIR": "${sourceDir}/.cache/vcpkg_installed",
+        "VCPKG_MANIFEST_FEATURES": "dev-tools"
+      },
+      "environment": {
+        "VCPKG_DEFAULT_BINARY_CACHE": "${sourceDir}/.cache/vcpkg-binary",
+        "VCPKG_DISABLE_METRICS": "1"
+      }
+    },
+    {
+      "name": "windows-base",
+      "hidden": true,
+      "inherits": "base",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Windows" },
+      "architecture": { "value": "x64", "strategy": "external" },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "cl",
+        "CMAKE_CXX_COMPILER": "cl",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-md"
+      }
+    },
+    {
+      "name": "windows-msvc-debug",
+      "displayName": "Windows MSVC Debug",
+      "inherits": "windows-base",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
+    },
+    {
+      "name": "windows-msvc-dev",
+      "displayName": "Windows MSVC Dev (optimized, developer features on)",
+      "inherits": "windows-base",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "RelWithDebInfo" }
+    },
+    {
+      "name": "windows-msvc-release",
+      "displayName": "Windows MSVC Release (no developer features)",
+      "inherits": "windows-base",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Release", "FL_DEV": "OFF", "FL_TRACY": "OFF" }
+    },
+    {
+      "name": "windows-clangcl-dev",
+      "displayName": "Windows clang-cl Dev",
+      "inherits": "windows-msvc-dev",
+      "cacheVariables": { "CMAKE_C_COMPILER": "clang-cl", "CMAKE_CXX_COMPILER": "clang-cl" }
+    },
+    {
+      "name": "ci-windows",
+      "displayName": "CI: Windows MSVC Dev with warnings as errors",
+      "inherits": "windows-msvc-dev",
+      "cacheVariables": { "FL_WARNINGS_AS_ERRORS": "ON" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "windows-msvc-debug", "configurePreset": "windows-msvc-debug" },
+    { "name": "windows-msvc-dev", "configurePreset": "windows-msvc-dev" },
+    { "name": "windows-msvc-release", "configurePreset": "windows-msvc-release" },
+    { "name": "windows-clangcl-dev", "configurePreset": "windows-clangcl-dev" },
+    { "name": "ci-windows", "configurePreset": "ci-windows" }
+  ],
+  "testPresets": [
+    { "name": "windows-msvc-debug", "configurePreset": "windows-msvc-debug", "output": { "outputOnFailure": true } },
+    { "name": "windows-msvc-dev", "configurePreset": "windows-msvc-dev", "output": { "outputOnFailure": true } },
+    { "name": "windows-msvc-release", "configurePreset": "windows-msvc-release", "output": { "outputOnFailure": true } },
+    { "name": "windows-clangcl-dev", "configurePreset": "windows-clangcl-dev", "output": { "outputOnFailure": true } },
+    { "name": "ci-windows", "configurePreset": "ci-windows", "output": { "outputOnFailure": true } }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "template": "debug",
+  "vertex": "debug.vert",
+  "fragment": "debug.frag",
+  "axes": [
+    { "name": "OBJECT", "values": ["DYNAMIC", "INSTANCED", "SKINNED"] }
+  ],
+  "maxVariants": 3
+}

@@ -1,0 +1,7 @@
+{
+  "template": "triangle",
+  "vertex": "triangle.vert",
+  "fragment": "triangle.frag",
+  "axes": [],
+  "maxVariants": 1
+}
