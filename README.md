@@ -38,7 +38,7 @@ those. The renderer only handles the graphics.
 In **Developer PowerShell for VS 2022**:
 
 ```powershell
-cd "D:\FlashLineage3D Engine"
+cd "C:\FlashLineage3D Engine"
 cmake --preset windows-msvc-dev
 cmake --build --preset windows-msvc-dev
 build\windows-msvc-dev\bin\fl_demo.exe
